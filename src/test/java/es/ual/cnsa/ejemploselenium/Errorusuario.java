@@ -13,6 +13,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import com.gargoylesoftware.htmlunit.BrowserVersion;
+
 public class Errorusuario {
   private WebDriver driver;
   private String baseUrl;
@@ -22,7 +24,7 @@ public class Errorusuario {
   @Before
   public void setUp() throws Exception {
     //driver = new FirefoxDriver();
-	  driver = new HtmlUnitDriver();
+	  driver = new HtmlUnitDriver(BrowserVersion.CHROME);
 	  // turn off htmlunit warnings
 	  java.util.logging.Logger.getLogger("com.gargoylesoftware.htmlunit").setLevel(java.util.logging.Level.OFF);
 	  java.util.logging.Logger.getLogger("org.apache.http").setLevel(java.util.logging.Level.OFF);
